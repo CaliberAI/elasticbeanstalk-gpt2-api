@@ -1,0 +1,31 @@
+openapi: '3.0.0'
+info:
+  version: '0.1'
+  title: 'AWS Elastic Beanstalk GPT-2 NLG API'
+servers:
+  - url: /v1
+paths:
+  /generate:
+    get:
+      operationId: application.generate
+      responses:
+        '200':
+          description: Generate text from a seed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Generated'
+      parameters:
+        - in: query
+          name: seed
+          schema: 
+            type: string 
+            default: The dog
+          required: true
+          description: The seed text to generate from.
+
+components:
+  schemas:
+    Generated:
+      type: string
+      example: The dog bit the man.
