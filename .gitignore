@@ -2,6 +2,7 @@ bin
 lib
 pyvenv.cfg
 __pycache__
+distilgpt2
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

@@ -1,8 +1,10 @@
+import os
 import connexion
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
-model_path = '/opt/python/current/app/distilgpt2'
+cwd = os.getcwd()
+model_path = cwd + '/distilgpt2'
 model = GPT2LMHeadModel.from_pretrained(model_path)
 tokenizer = GPT2Tokenizer.from_pretrained(model_path)
 
